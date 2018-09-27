@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SMSDK'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of SMSDK.'
   s.swift_version    = '4.0'
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.author           = { 'truongtvd' => 'truong@smartmove.vn' }
   s.source           = { :git => 'https://github.com/truongtvd/SMSDK.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
-  s.source_files = 'Classes/Classes/**/*'
+  s.source_files = 'SMSDK/Classes/**/*'
    s.resource_bundles = {
      'SMSDK' => ['Pod/Assets/*']
    }
@@ -35,6 +35,4 @@ Pod::Spec.new do |s|
   # s.dependency 'AFNetworking', '~> 2.3'
   s.ios.dependency 'Alamofire'
   s.ios.dependency 'MagicMapper'
-  s.ios.dependency 'FBAudienceNetwork'
-  s.ios.dependency 'Google-Mobile-Ads-SDK'
 end

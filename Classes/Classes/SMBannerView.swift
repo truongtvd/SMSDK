@@ -2,13 +2,13 @@
 import UIKit
 import SafariServices
 
-@objc protocol SMBannerViewDelegate {
+@objc public protocol SMBannerViewDelegate {
     @objc optional func bannerViewLoaded(bannerView:SMBannerView)
     @objc optional func bannerViewError()
     @objc optional func bannerViewDidClick()
 }
 
-class SMBannerView: UIView {
+public class SMBannerView: UIView {
     
     fileprivate var webView:UIWebView!
     var rootViewController:UIViewController!

@@ -3,7 +3,7 @@
 import UIKit
 import MagicMapper
 @objcMembers
-class Ads: NSObject,Mappable {
+public class Ads: NSObject,Mappable {
     var app_id = ""
     var ads_id = ""
     var format = ""

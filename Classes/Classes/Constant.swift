@@ -6,4 +6,4 @@
 //
 
 import Foundation
-let kAppId = ""
+public let kAppId = ""

@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 
-extension UIViewController{
+public extension UIViewController{
     func showAds(banner:BannerView,height:NSLayoutConstraint,config:RateConfig){
         let ads = AdsManager.share.adsId.banner
         banner.rootController = self

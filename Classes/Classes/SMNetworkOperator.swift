@@ -5,7 +5,7 @@ import AdSupport
 
 var testBundle = Bundle.main.bundleIdentifier!
 
-class SMNetworkOpertator{
+public class SMNetworkOpertator{
     private var orientation = ""
     private var device_type = "iphone"
     var baseParam:[String:Any]!

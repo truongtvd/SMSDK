@@ -2,7 +2,7 @@
 import UIKit
 import MagicMapper
 
-class AdsManager: NSObject {
+public class AdsManager: NSObject {
     static var share:AdsManager = AdsManager()
     let _count = "_count"
     var adsId:AdsId = AdsId()

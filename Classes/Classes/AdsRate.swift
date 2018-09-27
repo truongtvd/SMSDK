@@ -2,7 +2,7 @@
 
 import UIKit
 import MagicMapper
-enum RateConfig: String{
+public enum RateConfig: String{
     
     case banner_home
     case banner_gray_color
@@ -42,7 +42,7 @@ func iterateEnum<T: Hashable>(_: T.Type) -> AnyIterator<T> {
     }
 }
 @objcMembers
-class AdsRate: NSObject,Mappable {
+public class AdsRate: NSObject,Mappable {
     var banner_home = 1
     var banner_gray_color = 1
     var banner_filter = 1

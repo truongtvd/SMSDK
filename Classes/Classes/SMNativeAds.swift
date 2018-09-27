@@ -2,12 +2,12 @@
 
 import UIKit
 import MagicMapper
-@objc protocol SMNativeDelegate {
+@objc public protocol SMNativeDelegate {
     @objc optional func naviteLoaded(navite:SMAds)
     @objc optional func nativeLoadListed(natives:[SMAds])
     @objc optional func naviteError()
 }
-class SMNativeAds: NSObject {
+public class SMNativeAds: NSObject {
     var smAds:SMAds!
     private let  network:SMNetworkOpertator = SMNetworkOpertator()
     var isLoad:Bool = false

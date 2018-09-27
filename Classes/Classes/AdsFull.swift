@@ -4,12 +4,12 @@ import GoogleMobileAds
 import FBAudienceNetwork
 typealias AdsClose = ()->Void
 
-enum AdsType:String {
+public enum AdsType:String {
     case facebook = "facebook"
     case admob = "admob"
     case smads = "smads"
 }
-class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdDelegate,SMInterstitialDelegate {
+public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdDelegate,SMInterstitialDelegate {
 
     private var admobFull:GADInterstitial!
     private var facebookFull:FBInterstitialAd!

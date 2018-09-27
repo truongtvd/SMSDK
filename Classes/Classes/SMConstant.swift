@@ -2,4 +2,4 @@
 
 import UIKit
 
-let kUrl = "http://cpibe.appboom.net/api/v1/get_campaign"
+public let kUrl = "http://cpibe.appboom.net/api/v1/get_campaign"

@@ -2,13 +2,13 @@
 
 import UIKit
 import SafariServices
-@objc protocol SMInterstitialDelegate {
+@objc public protocol SMInterstitialDelegate {
     @objc optional func interstitialLoaded(interstitial:SMInterstitial)
     @objc optional func interstitialError()
     @objc optional func interstitialDidClick()
     @objc optional func interstitialCloseClick()
 }
-class SMInterstitial: NSObject {
+public class SMInterstitial: NSObject {
     var rootViewController:UIViewController!
     fileprivate var smAds:SMAds!
     let  network:SMNetworkOpertator = SMNetworkOpertator()

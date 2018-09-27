@@ -4,7 +4,7 @@ import UIKit
 import MagicMapper
 
 @objcMembers
-class SMAds: NSObject,Mappable {
+public class SMAds: NSObject,Mappable {
 
     var icon = ""
     var name = ""

@@ -25,7 +25,7 @@ public enum keyUserDefault : String {
     case isShowFavoritedFile
 }
 
-extension UserDefaults {
+public extension UserDefaults {
     class func save(_ value: Any,key:keyUserDefault){
         UserDefaults.standard.set(value, forKey: key.rawValue)
         UserDefaults.standard.synchronize()

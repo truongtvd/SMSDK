@@ -1,14 +1,14 @@
 
 import UIKit
 import StoreKit
-enum RateShow:String{
+public enum RateShow:String{
     case launchCountRate
     case done
     case fill
     
 }
-var canShow = true
-class RateManager: NSObject {
+public var canShow = true
+public class RateManager: NSObject {
     static var shared:RateManager =  RateManager()
     
     func rateLaunch(_ viewController:UIViewController,rateshow:RateShow){

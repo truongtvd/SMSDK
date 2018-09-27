@@ -2,10 +2,4 @@ use_frameworks!
 
 target 'SMSDK_Example' do
   pod 'SMSDK', :path => '../'
-
-  target 'SMSDK_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

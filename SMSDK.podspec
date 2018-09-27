@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   #   'SMSDK' => ['SMSDK/Assets/*.png']
   # }
 
-#   s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Classes/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.ios.dependency 'Alamofire'

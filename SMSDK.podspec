@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.author           = { 'truongtvd' => 'truong@smartmove.vn' }
   s.source           = { :git => 'https://github.com/truongtvd/SMSDK.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
-  s.source_files = 'Classes/Classes/*'
+  s.source_files = 'Classes/Classes/**/*'
   # s.resource_bundles = {
   #   'SMSDK' => ['SMSDK/Assets/*.png']
   # }

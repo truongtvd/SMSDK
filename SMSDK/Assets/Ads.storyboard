@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ads Full-->
+        <scene sceneID="UNz-GL-vpj">
+            <objects>
+                <viewController storyboardIdentifier="AdsFull" modalPresentationStyle="overFullScreen" id="e8w-cz-eDm" customClass="AdsFull" customModule="ColorBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E7N-v6-six"/>
+                        <viewControllerLayoutGuide type="bottom" id="89Q-I1-vHx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D2q-X8-dWO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Ads" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-ip-hCO">
+                                <rect key="frame" x="16" y="311" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="VWJ-T9-opK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="K8q-aG-BRF">
+                                <rect key="frame" x="169" y="403" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="9NL-m8-j7X"/>
+                                    <constraint firstAttribute="height" constant="37" id="Mtk-fD-rF9"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.4988721391" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K8q-aG-BRF" firstAttribute="centerX" secondItem="D2q-X8-dWO" secondAttribute="centerX" id="B2J-14-3dm"/>
+                            <constraint firstItem="qqa-ip-hCO" firstAttribute="leading" secondItem="D2q-X8-dWO" secondAttribute="leadingMargin" id="Kc9-lB-nMJ"/>
+                            <constraint firstItem="qqa-ip-hCO" firstAttribute="trailing" secondItem="D2q-X8-dWO" secondAttribute="trailingMargin" id="P2N-dA-DDw"/>
+                            <constraint firstItem="qqa-ip-hCO" firstAttribute="centerX" secondItem="D2q-X8-dWO" secondAttribute="centerX" id="s7X-Wg-M0J"/>
+                            <constraint firstItem="K8q-aG-BRF" firstAttribute="top" secondItem="qqa-ip-hCO" secondAttribute="bottom" constant="47" id="s8E-de-Nab"/>
+                            <constraint firstItem="qqa-ip-hCO" firstAttribute="centerY" secondItem="D2q-X8-dWO" secondAttribute="centerY" id="zbj-cA-hvO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eii-jg-rQc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VD2-qo-5q3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="10.344827586206897"/>
+        </scene>
+    </scenes>
+</document>

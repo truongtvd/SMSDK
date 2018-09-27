@@ -29,12 +29,12 @@ Pod::Spec.new do |s|
   # s.resource_bundles = {
   #   'SMSDK' => ['SMSDK/Assets/*.png']
   # }
-
+  s.resources   = ['FBAudienceNetwork.framework','GoogleMobileAds.framework']
   s.public_header_files = 'Classes/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.ios.dependency 'Alamofire'
   s.ios.dependency 'MagicMapper'
-  s.ios.dependency 'FBAudienceNetwork'
-  s.ios.dependency 'Google-Mobile-Ads-SDK'
+#  s.ios.dependency 'FBAudienceNetwork'
+#  s.ios.dependency 'Google-Mobile-Ads-SDK'
 end

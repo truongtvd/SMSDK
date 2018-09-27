@@ -10,7 +10,7 @@ import SafariServices
 }
 public class SMInterstitial: NSObject {
     public var rootViewController:UIViewController!
-    public var smAds:SMAds!
+    fileprivate var smAds:SMAds!
     let  network:SMNetworkOpertator = SMNetworkOpertator()
     public var isLoad:Bool = false
     public var slider = false
@@ -252,7 +252,11 @@ fileprivate class SMFullController : UIViewController,UIWebViewDelegate{
         btClose.layer.cornerRadius = 15.0
         btClose.translatesAutoresizingMaskIntoConstraints = false
         btClose.addTarget(self, action: #selector(actionCloseAds), for: .touchUpInside)
-        btClose.setImage(UIImage(named:"smads_close.png"), for: .normal)
+        
+        let pathBundle = Bundle.main.path(forResource: "SMSDK", ofType: "bundle")
+        let bundle = Bundle(path: pathBundle ?? "")
+        let imagePath = bundle?.path(forResource: "smads_close", ofType: "png")
+        btClose.setImage(UIImage(contentsOfFile: imagePath ?? ""), for: .normal)
         btClose.layer.shadowColor = UIColor.black.cgColor
         btClose.layer.shadowOpacity = 0.3
         btClose.layer.shadowOffset = CGSize.zero
@@ -263,7 +267,7 @@ fileprivate class SMFullController : UIViewController,UIWebViewDelegate{
         var topPadding:CGFloat = 0
         //        var bottomPadding:CGFloat = 0
         if #available(iOS 11.0, *) {
-            if UIScreen.main.nativeBounds.height == 2436{
+            if UIScreen.main.nativeBounds.height >= 2436{
                 let window = UIApplication.shared.keyWindow
                 topPadding = (window?.safeAreaInsets.top)!
             }else{

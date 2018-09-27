@@ -9,12 +9,12 @@ import SafariServices
     @objc optional func interstitialCloseClick()
 }
 public class SMInterstitial: NSObject {
-    var rootViewController:UIViewController!
+    public var rootViewController:UIViewController!
     fileprivate var smAds:SMAds!
     let  network:SMNetworkOpertator = SMNetworkOpertator()
-    var isLoad:Bool = false
-    var slider = false
-    var delegate:SMInterstitialDelegate!
+    public var isLoad:Bool = false
+    public var slider = false
+    public var delegate:SMInterstitialDelegate!
     override init() {
         super.init()
         
@@ -34,7 +34,7 @@ public class SMInterstitial: NSObject {
         }
     }
     
-    func load(){
+    public func load(){
         if rootViewController != nil{
             
             network.getFull(type: slider ? "slider_list":"full", success: { (json) in
@@ -69,7 +69,7 @@ public class SMInterstitial: NSObject {
         }
     }
     
-    func show() {
+    public func show() {
         if rootViewController != nil && self.smAds != nil && self.isLoad == true{
             let smFullVC = SMFullController()
             smFullVC.modalPresentationStyle = .overCurrentContext

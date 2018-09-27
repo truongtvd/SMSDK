@@ -5,10 +5,10 @@ import MagicMapper
 public class AdsManager: NSObject {
     static public var share:AdsManager = AdsManager()
     let _count = "_count"
-    var adsId:AdsId = AdsId()
-    var adsRate:AdsRate = AdsRate()
+    public var adsId:AdsId = AdsId()
+    public var adsRate:AdsRate = AdsRate()
     //get ads
-    func getAdsAndNote(complete:@escaping ()->Void){
+    public func getAdsAndNote(complete:@escaping ()->Void){
         AdsNetwork.shared.getAdsId(bundle_id: Bundle.main.bundleIdentifier!, complete: {
             AdsNetwork.shared.getAdsConfig(bundle_id: Bundle.main.bundleIdentifier!, complete: {
                 complete()
@@ -21,7 +21,7 @@ public class AdsManager: NSObject {
         }
         
     }
-    func smNative(_ vc:UIViewController, loadAd: @escaping ()-> Void){ //template 1
+    public func smNative(_ vc:UIViewController, loadAd: @escaping ()-> Void){ //template 1
         UserDefaults.plus(.numberLaunchApps)
         
         let start = adsRate.ad_dialog_start
@@ -51,7 +51,7 @@ public class AdsManager: NSObject {
     }
     
     //reset lai toan bo gia tri rate cua ads, va duoc goi khi ung dung duoc khoi tao
-    func rateDefault(){
+    public func rateDefault(){
         let userDefault = UserDefaults.standard
         let adsRate = AdsRate()
         let mirrored_object = Mirror(reflecting: adsRate)
@@ -68,7 +68,7 @@ public class AdsManager: NSObject {
         }
     }
     
-    func getAppId(adsid: AdsId)->String{
+    public func getAppId(adsid: AdsId)->String{
         let mirrored_object = Mirror(reflecting: adsid)
         for  attr in mirrored_object.children {
             if let json = attr.value as? KeyValue{
@@ -83,7 +83,7 @@ public class AdsManager: NSObject {
     
     
     //khi lay duoc config moi tu server
-    func addRate(rate:AdsRate!) {
+    public func addRate(rate:AdsRate!) {
         adsRate = rate
         let userDefault = UserDefaults.standard
         let mirrored_object = Mirror(reflecting: adsRate)
@@ -96,7 +96,7 @@ public class AdsManager: NSObject {
         }
     }
     
-    func showBanner(ads:Ads,rateConfig : RateConfig) -> Bool {
+    public func showBanner(ads:Ads,rateConfig : RateConfig) -> Bool {
         let userDefault = UserDefaults.standard
         let bannerStatus = userDefault.integer(forKey: rateConfig.rawValue)
         if bannerStatus > 0 && ads.ads_id != "" && ads.status == 1{
@@ -105,12 +105,12 @@ public class AdsManager: NSObject {
         return false
     }
     
-    func countAddNativeAds(rateConfig : RateConfig) -> Int {
+    public func countAddNativeAds(rateConfig : RateConfig) -> Int {
         let userDefault = UserDefaults.standard
         let bannerStatus = userDefault.integer(forKey: rateConfig.rawValue)
         return bannerStatus
     }
-    func showNativeAds(rateConfig : RateConfig) -> String {
+    public func showNativeAds(rateConfig : RateConfig) -> String {
         let ads = adsId.native_advanced
         let userDefault = UserDefaults.standard
         let bannerStatus = userDefault.integer(forKey: rateConfig.rawValue)
@@ -121,7 +121,7 @@ public class AdsManager: NSObject {
         }
         return "none"
     }
-    func showStartLoopFull(_ viewcontroller: UIViewController,
+    public func showStartLoopFull(_ viewcontroller: UIViewController,
                            ads:Ads,
                            rateStartConfig: RateConfig,
                            rateLoopConfig:RateConfig,
@@ -196,7 +196,7 @@ public class AdsManager: NSObject {
     }
     
     
-    func showFull(_ viewcontroller: UIViewController,
+    public func showFull(_ viewcontroller: UIViewController,
                   ads:Ads,
                   rateConfig: RateConfig,
                   complete:@escaping ()->Void){

@@ -8,12 +8,12 @@ import MagicMapper
     @objc optional func naviteError()
 }
 public class SMNativeAds: NSObject {
-    var smAds:SMAds!
+    public var smAds:SMAds!
     private let  network:SMNetworkOpertator = SMNetworkOpertator()
-    var isLoad:Bool = false
-    var delegate:SMNativeDelegate!
+    public var isLoad:Bool = false
+    public var delegate:SMNativeDelegate!
     
-    func load(){
+    public func load(){
         network.getNative(success: { (json) in
             self.smAds = SMAds(json)
             self.isLoad = true
@@ -30,7 +30,7 @@ public class SMNativeAds: NSObject {
             }
         })
     }
-    func loadList(){
+    public func loadList(){
         network.getNativeList(success: { (json) in
             if let code =  json["code"] as? Int{
                 if code == 100{

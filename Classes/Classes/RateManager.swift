@@ -9,9 +9,9 @@ public enum RateShow:String{
 }
 public var canShow = true
 public class RateManager: NSObject {
-    static var shared:RateManager =  RateManager()
+    static public var shared:RateManager =  RateManager()
     
-    func rateLaunch(_ viewController:UIViewController,rateshow:RateShow){
+    public func rateLaunch(_ viewController:UIViewController,rateshow:RateShow){
         
         let currentCount = UserDefaults.standard.integer(forKey: rateshow.rawValue)
         print(currentCount)
@@ -36,7 +36,7 @@ public class RateManager: NSObject {
     }
     
     
-    func rateDone(_ viewController:UIViewController,rateshow:RateShow){
+    public func rateDone(_ viewController:UIViewController,rateshow:RateShow){
         let currentCount = UserDefaults.standard.integer(forKey: rateshow.rawValue)
         if currentCount == 0{
             if canShow{
@@ -47,7 +47,7 @@ public class RateManager: NSObject {
         UserDefaults.standard.set(currentCount+1, forKey:rateshow.rawValue)
         UserDefaults.standard.synchronize()
     }
-    func rateFill(_ viewController:UIViewController,rateshow:RateShow){
+    public func rateFill(_ viewController:UIViewController,rateshow:RateShow){
         let currentCount = UserDefaults.standard.integer(forKey: rateshow.rawValue)
         if currentCount == 0{
             if canShow{
@@ -59,7 +59,7 @@ public class RateManager: NSObject {
         UserDefaults.standard.synchronize()
     }
     
-    func rateListen(_ viewController:UIViewController,rateshow:RateShow){
+    public func rateListen(_ viewController:UIViewController,rateshow:RateShow){
         let currentCount = UserDefaults.standard.integer(forKey: rateshow.rawValue)
         if currentCount == 9{
             if canShow{
@@ -71,7 +71,7 @@ public class RateManager: NSObject {
         UserDefaults.standard.synchronize()
     }
     
-    func showRating(_ viewController:UIViewController,rateshow:RateShow){
+    public func showRating(_ viewController:UIViewController,rateshow:RateShow){
         if #available(iOS 10.3, *){
             let alert = UIAlertController(title: "Rate us", message: "Do you want rate me?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "No, thanks", style: .default, handler: { (action) in

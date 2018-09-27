@@ -43,19 +43,19 @@ func iterateEnum<T: Hashable>(_: T.Type) -> AnyIterator<T> {
 }
 @objcMembers
 public class AdsRate: NSObject,Mappable {
-    var banner_home = 1
-    var banner_gray_color = 1
-    var banner_filter = 1
-    var start_cam_click_full = 3
-    var loop_cam_click_full = 3
-    var start_library_click_full = 2
-    var loop_library_click_full = 2
-    var start_next_click_full = 2
-    var loop_next_click_full = 2
-    var start_save_click_full = 2
-    var loop_save_click_full = 2
-    var ad_dialog_start = 0
-    var ad_dialog_loop = 0
-    var start_sm_ads = 0
-    var loop_sm_ads = 0
+    public var banner_home = 1
+    public var banner_gray_color = 1
+    public var banner_filter = 1
+    public var start_cam_click_full = 3
+    public var loop_cam_click_full = 3
+    public var start_library_click_full = 2
+    public var loop_library_click_full = 2
+    public var start_next_click_full = 2
+    public var loop_next_click_full = 2
+    public var start_save_click_full = 2
+    public var loop_save_click_full = 2
+    public var ad_dialog_start = 0
+    public var ad_dialog_loop = 0
+    public var start_sm_ads = 0
+    public var loop_sm_ads = 0
 }

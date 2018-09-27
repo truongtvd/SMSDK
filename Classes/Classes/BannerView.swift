@@ -7,8 +7,8 @@ public let ADSHeight:CGFloat = UIDevice.current.userInterfaceIdiom == .phone ? 6
 public class BannerView: UIView,GADBannerViewDelegate,FBAdViewDelegate {
     private var admobview:GADBannerView!
     private var facebookview:FBAdView!
-    var rootController:UIViewController!
-    var ads:Ads!{
+    public var rootController:UIViewController!
+    public var ads:Ads!{
         didSet{
             self.initAds()
         }

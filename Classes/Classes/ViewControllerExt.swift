@@ -4,7 +4,7 @@ import UIKit
 
 
 public extension UIViewController{
-    func showAds(banner:BannerView,height:NSLayoutConstraint,config:RateConfig){
+    public func showAds(banner:BannerView,height:NSLayoutConstraint,config:RateConfig){
         let ads = AdsManager.share.adsId.banner
         banner.rootController = self
         banner.ads = ads

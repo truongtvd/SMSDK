@@ -34,7 +34,7 @@ public class SMNetworkOpertator{
             "sdk_version":"1.0"]
 //        print(baseParam)
     }
-    internal func getResponse(_ url:String ,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+    public func getResponse(_ url:String ,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         Alamofire.request(url)
             .responseJSON {response in
                 switch (response.result){
@@ -51,7 +51,7 @@ public class SMNetworkOpertator{
         }
     }
     
-    internal func getBanner(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+    public func getBanner(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("banner", forKey: "ad_format")
         print(params)
@@ -70,7 +70,7 @@ public class SMNetworkOpertator{
                 
         }
     }
-    internal func getFull(type:String,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+    public func getFull(type:String,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue(type, forKey: "ad_format")
         Alamofire.request(kUrl,method: .get, parameters: params)
@@ -88,7 +88,7 @@ public class SMNetworkOpertator{
                 
         }
     }
-    internal func getNative(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+    public func getNative(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("native", forKey: "ad_format")
         Alamofire.request(kUrl,method: .get, parameters: params)
@@ -106,7 +106,7 @@ public class SMNetworkOpertator{
                 
         }
     }
-    internal func getNativeList(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+    public func getNativeList(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("native_list", forKey: "ad_format")
         Alamofire.request(kUrl,method: .get, parameters: params)
@@ -124,7 +124,7 @@ public class SMNetworkOpertator{
                 
         }
     }
-    internal func openLink(url:String,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+    public func openLink(url:String,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         
         Alamofire.request(url,method: .get, parameters: nil)
             .responseJSON {response in

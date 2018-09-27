@@ -4,9 +4,9 @@ import UIKit
 import MagicMapper
 @objcMembers
 public class Ads: NSObject,Mappable {
-    var app_id = ""
-    var ads_id = ""
-    var format = ""
-    var status = 0
-    var network = ""
+    public var app_id = ""
+    public var ads_id = ""
+    public var format = ""
+    public var status = 0
+    public var network = ""
 }

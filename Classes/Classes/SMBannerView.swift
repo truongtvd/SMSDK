@@ -11,9 +11,9 @@ import SafariServices
 public class SMBannerView: UIView {
     
     fileprivate var webView:UIWebView!
-    var rootViewController:UIViewController!
-    var delegate:SMBannerViewDelegate!
-    var timeReload = 60
+    public var rootViewController:UIViewController!
+    public var delegate:SMBannerViewDelegate!
+    public var timeReload = 60
     
     
     let  network:SMNetworkOpertator = SMNetworkOpertator()
@@ -49,7 +49,7 @@ public class SMBannerView: UIView {
 //        self.initButtonWatermark()
 //        btWatermark.isHidden = true
     }
-    @objc func load(){
+    @objc public func load(){
         if rootViewController != nil{
             
             Timer.scheduledTimer(timeInterval: TimeInterval(timeReload), target: self, selector: #selector(load), userInfo: nil, repeats: false)

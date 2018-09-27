@@ -4,8 +4,8 @@ import UIKit
 import MagicMapper
 @objcMembers
 public class AdsId: NSObject,Mappable {
-    var full = Ads()
-    var banner = Ads()
-    var native_advanced = Ads()
+    public var full = Ads()
+    public var banner = Ads()
+    public var native_advanced = Ads()
     
 }

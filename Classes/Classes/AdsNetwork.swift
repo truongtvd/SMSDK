@@ -5,9 +5,9 @@ import GoogleMobileAds
 import MagicMapper
 public class AdsNetwork: NSObject {
     
-    static var shared: AdsNetwork = AdsNetwork()
+    static public var shared: AdsNetwork = AdsNetwork()
     
-    func getAdsId(bundle_id:String,
+    public func getAdsId(bundle_id:String,
                   complete:@escaping ()->Void,
                   failure:@escaping ()->Void){
         let params:[String:Any] = ["package_name":bundle_id]
@@ -37,7 +37,7 @@ public class AdsNetwork: NSObject {
             }
         }
     }
-    func getAdsConfig(bundle_id:String,
+    public func getAdsConfig(bundle_id:String,
                   complete:@escaping ()->Void,
                   failure:@escaping ()->Void){
         let params:[String:Any] = ["package_name":bundle_id]

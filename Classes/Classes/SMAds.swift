@@ -6,10 +6,10 @@ import MagicMapper
 @objcMembers
 public class SMAds: NSObject,Mappable {
 
-    var icon = ""
-    var name = ""
-    var desc = ""
-    var screenshots:[String] = []
-    var link = ""
-    var html = ""
+    public var icon = ""
+    public var name = ""
+    public var desc = ""
+    public var screenshots:[String] = []
+    public var link = ""
+    public var html = ""
 }

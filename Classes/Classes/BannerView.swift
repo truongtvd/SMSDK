@@ -1,6 +1,7 @@
 
 import UIKit
 import GoogleMobileAds
+import FBAudienceNetwork
 
 let ADSHeight:CGFloat = UIDevice.current.userInterfaceIdiom == .phone ? 60.0 : 100.0
 class BannerView: UIView,GADBannerViewDelegate,FBAdViewDelegate {

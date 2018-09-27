@@ -1,6 +1,7 @@
 
 
 import UIKit
+import MagicMapper
 @objcMembers
 class Ads: NSObject,Mappable {
     var app_id = ""

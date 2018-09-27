@@ -2,6 +2,7 @@
 import UIKit
 import Alamofire
 import GoogleMobileAds
+import MagicMapper
 class AdsNetwork: NSObject {
     
     static var shared: AdsNetwork = AdsNetwork()

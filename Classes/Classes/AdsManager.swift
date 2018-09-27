@@ -1,5 +1,6 @@
 
 import UIKit
+import MagicMapper
 
 class AdsManager: NSObject {
     static var share:AdsManager = AdsManager()

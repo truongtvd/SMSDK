@@ -1,7 +1,7 @@
 
 import UIKit
 import GoogleMobileAds
-
+import FBAudienceNetwork
 typealias AdsClose = ()->Void
 
 enum AdsType:String {

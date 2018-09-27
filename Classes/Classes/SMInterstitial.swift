@@ -75,10 +75,8 @@ class SMInterstitial: NSObject {
             smFullVC.modalPresentationStyle = .overCurrentContext
             smFullVC.smAds = self.smAds
             smFullVC.hidesBottomBarWhenPushed = true
-            if let appdelete = UIApplication.shared.delegate as? AppDelegate{
-                appdelete.window?.rootViewController?.present(smFullVC, animated: true, completion: nil)
-            }
-            //            rootViewController.present(smFullVC, animated: true, completion: nil)
+         
+            rootViewController.present(smFullVC, animated: true, completion: nil)
         }else{
             print("Ads cannot show")
             if self.delegate != nil{

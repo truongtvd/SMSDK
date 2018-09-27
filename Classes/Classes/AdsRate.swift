@@ -1,7 +1,7 @@
 
 
 import UIKit
-
+import MagicMapper
 enum RateConfig: String{
     
     case banner_home

@@ -1,5 +1,6 @@
 
 import UIKit
+import StoreKit
 enum RateShow:String{
     case launchCountRate
     case done

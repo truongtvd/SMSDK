@@ -1,5 +1,6 @@
 use_frameworks!
 
 target 'SMSDK_Example' do
+  use_frameworks!
   pod 'SMSDK', :path => '../'
 end

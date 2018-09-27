@@ -10,15 +10,12 @@ import SafariServices
 }
 public class SMInterstitial: NSObject {
     public var rootViewController:UIViewController!
-    fileprivate var smAds:SMAds!
+    public var smAds:SMAds!
     let  network:SMNetworkOpertator = SMNetworkOpertator()
     public var isLoad:Bool = false
     public var slider = false
     public var delegate:SMInterstitialDelegate!
-    override init() {
-        super.init()
-        
-    }
+   
     
     @objc private func adsClose(){
         if delegate != nil{

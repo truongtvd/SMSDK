@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source_files = 'SMSDK/Classes/**/*'
    s.resource_bundles = {
-     'SMSDK' => ['Pod/Assets/*']
+     'SMSDK' => ['SMSDK/Assets/*']
    }
   s.static_framework = true
 #  s.public_header_files = 'Classes/Classes/**/*.h'

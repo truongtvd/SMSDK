@@ -129,6 +129,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				8921C1AD8AA4899EB274AB8B /* [CP] Embed Pods Frameworks */,
+				A564024A0069A04C477B457C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +225,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMSDK_Example/Pods-SMSDK_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A564024A0069A04C477B457C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SMSDK_Example/Pods-SMSDK_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SMSDK/SMSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SMSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMSDK_Example/Pods-SMSDK_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

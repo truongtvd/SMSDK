@@ -3,7 +3,7 @@ import Alamofire
 import MagicMapper
 import AdSupport
 
-var testBundle = Bundle.main.bundleIdentifier!
+public var testBundle = Bundle.main.bundleIdentifier!
 
 public class SMNetworkOpertator{
     private var orientation = ""

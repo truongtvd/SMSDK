@@ -24,6 +24,23 @@ it, simply add the following line to your Podfile:
 use_frameworks!
 pod 'SMSDK', :git => 'https://github.com/truongtvd/SMSDK.git'
 ```
+## Example
+
+Full with silder
+```ruby
+let smfull = SMInterstitial()
+smfull.rootViewController = self
+smfull.slider = true
+smfull.delegate = self
+smfull.load()
+```
+Delegate
+```ruby
+func interstitialLoaded(interstitial:SMInterstitial)
+func interstitialError()
+func interstitialDidClick()
+func interstitialCloseClick()
+```
 
 ## Author
 

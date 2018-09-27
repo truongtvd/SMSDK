@@ -36,7 +36,7 @@ public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdD
     public override func show(_ vc: UIViewController, sender: Any?) {
         vc.present(self, animated: false, completion: nil)
     }
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
          timecount = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(self.timeEnd), userInfo: nil, repeats: false)

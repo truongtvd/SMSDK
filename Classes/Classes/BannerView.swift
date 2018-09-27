@@ -3,7 +3,7 @@ import UIKit
 import GoogleMobileAds
 import FBAudienceNetwork
 
-let ADSHeight:CGFloat = UIDevice.current.userInterfaceIdiom == .phone ? 60.0 : 100.0
+public let ADSHeight:CGFloat = UIDevice.current.userInterfaceIdiom == .phone ? 60.0 : 100.0
 public class BannerView: UIView,GADBannerViewDelegate,FBAdViewDelegate {
     private var admobview:GADBannerView!
     private var facebookview:FBAdView!
@@ -116,7 +116,7 @@ public class BannerView: UIView,GADBannerViewDelegate,FBAdViewDelegate {
         super.init(coder: aDecoder)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         self.backgroundColor = UIColor.black
 
     }

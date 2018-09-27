@@ -3,7 +3,7 @@ import UIKit
 import MagicMapper
 
 public class AdsManager: NSObject {
-    static var share:AdsManager = AdsManager()
+    static public var share:AdsManager = AdsManager()
     let _count = "_count"
     var adsId:AdsId = AdsId()
     var adsRate:AdsRate = AdsRate()

@@ -11,13 +11,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 ```ruby
-xcode 9\n
-ios 9.0\n
-Swift 4.0
-```
 xcode 9
 ios 9.0
 Swift 4.0
+```
 ## Installation
 
 SMSDK is available through [CocoaPods](https://cocoapods.org). To install

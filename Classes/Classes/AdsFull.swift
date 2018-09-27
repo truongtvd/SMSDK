@@ -44,7 +44,7 @@ public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdD
 //        self.loadAds()
     }
     
-    @objc func loadAds(){
+    @objc public func loadAds(){
         if ads_type == .facebook{
             facebookFull = FBInterstitialAd(placementID: ads_id)
             facebookFull.delegate = self
@@ -64,17 +64,17 @@ public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdD
 
         }
     }
-    func interstitialError() {
+    public func interstitialError() {
         timecount.invalidate()
         self.dismiss(animated: false, completion: nil)
         if self.adsClose != nil{
             self.adsClose()
         }
     }
-    func interstitialDidClick() {
+    public func interstitialDidClick() {
         
     }
-    func interstitialCloseClick() {
+    public func interstitialCloseClick() {
         timecount.invalidate()
         self.dismiss(animated: false, completion: {
             
@@ -83,26 +83,26 @@ public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdD
             self.adsClose()
         }
     }
-    func interstitialLoaded(interstitial: SMInterstitial) {
+    public func interstitialLoaded(interstitial: SMInterstitial) {
         self.isShow = true
         timecount.invalidate()
         self.smFull.show()
     }
-    func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
+    public func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
         
         self.isShow = true
         timecount.invalidate()
         facebookFull.show(fromRootViewController: self)
     }
     
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+    public func interstitialDidReceiveAd(_ ad: GADInterstitial) {
       
         self.isShow = true
         timecount.invalidate()
         admobFull.present(fromRootViewController: self)
     }
     
-    func interstitialAdDidClose(_ interstitialAd: FBInterstitialAd) {
+    public func interstitialAdDidClose(_ interstitialAd: FBInterstitialAd) {
         timecount.invalidate()
         self.dismiss(animated: false, completion: {
             
@@ -113,7 +113,7 @@ public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdD
         
     }
     
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+    public func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         timecount.invalidate()
         self.dismiss(animated: false, completion: {
 //            let continueVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: ContinueVC.className) as! ContinueVC
@@ -127,7 +127,7 @@ public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdD
         
     }
     
-    func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
+    public func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
         timecount.invalidate()
         
         self.dismiss(animated: false, completion: nil)
@@ -136,7 +136,7 @@ public class AdsFull: UIViewController,GADInterstitialDelegate,FBInterstitialAdD
         }
     }
     
-    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+    public func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
         timecount.invalidate()
         self.dismiss(animated: false, completion: {
             if self.adsClose != nil{

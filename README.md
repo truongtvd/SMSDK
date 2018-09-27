@@ -42,6 +42,44 @@ func interstitialDidClick()
 func interstitialCloseClick()
 ```
 
+Dialog Cross Ads
+```ruby
+self.smnative = SMNativeAds()
+self.smnative.delegate = self
+self.smnative.load()
+```
+Delegate of SMNativeAds
+```ruby
+func naviteLoaded(navite: SMAds) {
+//Native loaded
+
+if AdsManager.share.adsRate.ad_dialog_start == 0 && AdsManager.share.adsRate.ad_dialog_loop == 0{
+return
+}
+let alertQC = UIAlertController.init(title: navite.name, message: navite.desc, preferredStyle: .alert)
+alertQC.addAction(UIAlertAction(title: "Download Now", style: .default, handler: { (action) in
+let smnet = SMNetworkOpertator()
+smnet.openLink(url: navite.link, success: { (json) in
+if let link = json["link"] as? String{
+let uri = URL.init(string: link)
+if  uri?.scheme == "itms"{
+UIApplication.shared.openURL(uri!)
+
+}
+}
+}) { (error) in
+self.dismiss(animated: true) {
+}
+}
+
+}))
+alertQC.addAction(UIAlertAction(title: "No, Thank you", style: .default, handler: { (action) in
+
+}))
+self.present(alertQC, animated: true, completion: nil)
+}
+```
+
 ## Author
 
 truongtvd, truong@smartmove.vn

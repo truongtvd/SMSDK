@@ -11,7 +11,7 @@ public class SMNetworkOpertator{
     var baseParam:[String:Any]!
     
     
-    init() {
+    public init() {
         if UIDevice.current.orientation.isLandscape {
             orientation = "landscape"
         }else{

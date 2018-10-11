@@ -38,6 +38,9 @@ public class SMInterstitial: NSObject {
                 //                print(json)
                 if json["msg"] as? String == "Cross is not running." || json["error"] as? NSNumber == 1{
                     print("Tắt Quảng Cáo Chéo")
+                    if self.delegate != nil{
+                        self.delegate.interstitialError?()
+                    }
                 }else{
                     self.smAds = SMAds(json)
                     self.isLoad = true

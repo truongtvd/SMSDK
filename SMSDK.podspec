@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SMSDK'
+  s.name             = 'SMCrossSDK'
   s.version          = '1.0.0'
   s.summary          = 'A short description of SMSDK.'
   s.swift_version    = '4.0'
